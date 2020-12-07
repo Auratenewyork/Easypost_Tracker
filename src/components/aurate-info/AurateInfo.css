@@ -1,0 +1,28 @@
+.aurate__info {
+    width: 100%;
+}
+.aurate__info-title {
+    font-size: 32px;
+    color: #42544F;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 70px 0 50px 0;
+}
+.aurate__info-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.container {
+    max-width: 1480px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 580px) {
+    .aurate__items {
+        flex-wrap: wrap;
+    }
+}
+

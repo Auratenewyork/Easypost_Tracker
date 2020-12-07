@@ -1,0 +1,12 @@
+.aurate__info-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.03);
+    width: 216px;
+}
+.aurate__info-text {
+    font-size: 14px;
+    padding: 25px 20px 25px 20px;
+}
