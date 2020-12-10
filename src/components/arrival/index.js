@@ -1,3 +1,3 @@
-import Arrivals from './Arrivals'
+import Arrivals from './Arrival'
 
 export default Arrivals;

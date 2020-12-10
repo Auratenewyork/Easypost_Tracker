@@ -3,10 +3,13 @@
 }
 .aurate__info-title {
     font-size: 32px;
-    color: #42544F;
     letter-spacing: 0;
     text-align: center;
     margin: 70px 0 50px 0;
+}
+.aurate__info-title a {
+    text-decoration: none;
+    color: #42544F;
 }
 .aurate__info-items {
     display: flex;
@@ -25,4 +28,3 @@
         flex-wrap: wrap;
     }
 }
-

@@ -1,0 +1,53 @@
+.way__info__wrapper {
+    max-height: 232px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.way__info {
+    border-top: 1px solid #E4E4E4;
+    display: flex;
+    margin: 0 30px;
+}
+
+.way__info:last-child {
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.info__title {
+    font-size: 16px;
+    color: #42544F;
+    text-align: left;
+}
+.info__text {
+    font-size: 14px;
+    color: #A2A2A2;
+    line-height: 28px;
+}
+.way__info-item {
+    padding: 15px 0;
+}
+
+.first-item {
+    flex: 0 0 30%;
+}
+.second-item {
+    flex: 0 0 70%;
+}
+.tracking__number {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding: 0 30px;
+}
+.tracking__number-text {
+    font-size: 14px;
+    color: #A2A2A2;
+    line-height: 28px;
+}
+
+@media screen and (max-width: 660px) {
+    .aurate__item {
+        width: 100%;
+    }
+}

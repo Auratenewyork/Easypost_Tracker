@@ -3,10 +3,83 @@
     margin-top: 70px;
     flex-wrap: wrap;
 }
+
 @media screen and (max-width: 1480px) {
     .main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+}
+
+.arrival__block {
+    max-width: 592px;
+    width: 100%;
+    padding: 30px 0px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.03);
+}
+
+.arrival__title{
+    font-size: 18px;
+    color: #42544F;
+    letter-spacing: 0;
+    display: block;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 46px;
+}
+.arrival__date {
+    margin-left: 30px;
+}
+.arrival__day-name {
+    font-size: 24px;
+    color: #42544F;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-family: 'GT Bold', sans-serif;
+    font-weight: 700;
+}
+.arrival__month {
+    font-size: 18px;
+    color: #42544F;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.arrival__day {
+    font-size: 110px;
+    color: #C27030;
+    letter-spacing: 0;
+    font-family: 'GT Italic', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.arrival__path {
+    font-size: 24px;
+    color: #42544F;
+    letter-spacing: 0;
+    padding: 0 30px;
+    margin-bottom: 22px;
+    margin-top: 35px;
+}
+
+.tracking__button {
+    padding: 0 30px 0 30px;
+}
+
+.tracking__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    color: #C2C2C2;
+    letter-spacing: 0;
+    padding: 17px 0;
+    background: none;
+    border: 2px solid #E4E4E4;
+    border-radius: 3px;
+    cursor: pointer;
 }

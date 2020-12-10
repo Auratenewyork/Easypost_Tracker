@@ -3,12 +3,12 @@ import './AurateItem.css'
 
 const AurateItem = (props) => {
     return(
-        <div className="aurate__item">
+        <a href={props.url} target="_blank" rel="noopener noreferrer" className="aurate__item">
             <div className="aurate__item-img">
                 <img className="img" src={props.img} alt=""/>
             </div>
             <div className="aurate__title">{props.title}</div>
-        </div>
+        </a>
     )
 }
 
