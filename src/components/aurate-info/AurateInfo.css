@@ -22,9 +22,15 @@
     width: 100%;
 }
 
+@media screen and (max-width: 1480px) {
+    .aurate__items {
+        align-self: center;
+    }
+}
 
 @media screen and (max-width: 580px) {
     .aurate__items {
         flex-wrap: wrap;
+        align-self: center;
     }
 }

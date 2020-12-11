@@ -1,6 +1,5 @@
 import React from 'react'
 import './LastTrackingActivity.css'
-import moment from 'moment'
 
 
 const LastTrackingActivity = ({ activity }) => {
@@ -12,8 +11,9 @@ const LastTrackingActivity = ({ activity }) => {
         return (
           <div className="tracking-activity__item" key={index}>
             <div className="tracking-activity__item__column">
-              <div className="info__title">{moment(item.date).format('DD/MM/YYYY')}</div>
-              <div className="info__text">12:00 am</div></div>
+              <div className="info__title">{item.date}</div>
+              <div className="info__text">{item.time}</div>
+              </div>
             <div className="tracking-activity__item__column timeline">
               {/* <div className={`timeline__circle ${item.done ? 'active' : ''}`}> */}
               <div className="timeline__circle active">

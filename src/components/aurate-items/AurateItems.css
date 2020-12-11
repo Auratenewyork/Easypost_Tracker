@@ -1,3 +1,4 @@
 .aurate__items {
     display: flex;
+    align-self: flex-start;
 }
