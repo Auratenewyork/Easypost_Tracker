@@ -11,26 +11,27 @@ const Arrivals = ({ trackingData }) => {
     const showPreviousActivity = () => setShowFullActivity(true)
     const hidePreviousActivity = () => setShowFullActivity(false)
 
-    const lastActivity = trackingData.slice(0, 2)
+    const activity = trackingData.items
+    const lastActivity = activity.slice(0, 2)
 
     return (
         <main className="main">
             <div className="arrival__block">
                 <span className="arrival__title">ESTIMATED ARRIVAL DATE</span>
                 <div className="arrival__date">
-                    <div className="arrival__day-name">Thursday</div>
-                    <div className="arrival__month">August</div>
-                    <div className="arrival__day">20</div>
+                    <div className="arrival__day-name">{trackingData.estimated_date.weekday}</div>
+                    <div className="arrival__month">{trackingData.estimated_date.month}</div>
+                    <div className="arrival__day">{trackingData.estimated_date.day}</div>
 
                 </div>
             <div className="arrival__path">ON ITS WAY</div>
-                {trackingData.length > LAST_ACTIVITY_NUMBER
+                {activity.length > LAST_ACTIVITY_NUMBER
                     ? showFullActivity
-                        ? <FullTrackingActivity activity={trackingData} />
+                        ? <FullTrackingActivity activity={activity} />
                         : <LastTrackingActivity activity={lastActivity} />
                     : <LastTrackingActivity activity={lastActivity} />
                 }
-                {trackingData.length > LAST_ACTIVITY_NUMBER &&
+                {activity.length > LAST_ACTIVITY_NUMBER &&
                     <div className="tracking__button">
                         {showFullActivity
                             ? <button className="tracking__btn" onClick={hidePreviousActivity}>BACK</button>

@@ -29,11 +29,9 @@ function App() {
         )
     }
 
-    if (!data || !data.length) {
+    if (!data || !data.items) {
         return <NotFound errorCode={500} />
     }
-
-    console.log(data)
 
     return (
         <>
