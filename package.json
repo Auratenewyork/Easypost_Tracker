@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && aws s3 sync ./build s3://aurate-tracker && aws cloudfront create-invalidation --distribution-id ECNJEL4ULB2CC --paths '/*'"
   },
   "eslintConfig": {
     "extends": "react-app"
