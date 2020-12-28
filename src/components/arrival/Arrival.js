@@ -17,14 +17,14 @@ const Arrivals = ({ trackingData }) => {
     return (
         <main className="main">
             <div className="arrival__block">
-                <span className="arrival__title">ESTIMATED ARRIVAL DATE</span>
+                <span className="arrival__title">ESTIMATED SHIP DATE</span>
                 <div className="arrival__date">
                     <div className="arrival__day-name">{trackingData.estimated_date.weekday}</div>
                     <div className="arrival__month">{trackingData.estimated_date.month}</div>
                     <div className="arrival__day">{trackingData.estimated_date.day}</div>
 
                 </div>
-            <div className="arrival__path">ON ITS WAY</div>
+                <div className="arrival__path">ON ITS WAY</div>
                 {activity.length > LAST_ACTIVITY_NUMBER
                     ? showFullActivity
                         ? <FullTrackingActivity activity={activity} />
