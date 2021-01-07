@@ -11,7 +11,7 @@ const AurateInfo = () => {
     return (
         <div className="aurate__info">
             <div className="container">
-                <h2 className="aurate__info-title">WHAT'S HAPPENING AT AURATE</h2>
+                <h2 className="aurate__info-title">IN THE KNAU</h2>
                 <div className="aurate__info-items">
                     <div className="aurate__items-item">
                         <AurateInfoItem img={img1} title="Aurate x She Should Run" url="https://auratenewyork.com/blogs/blog/aurate-x-she-should-run" />

@@ -6,10 +6,10 @@ import item2 from '../../assets/img/img2.jpg';
 
 
 const AurateItems = () => {
-    return(
+    return (
         <div className="aurate__items">
-            <AurateItem title="NEW COLLECTION" img={item1} url="https://auratenewyork.com/collections/new" />
-            <AurateItem title="VIRTUAL STYLING" img={item2} url="https://auratenewyork.com/pages/book-a-styling-appointment" />
+            <AurateItem title="NEW IN" img={item1} url="https://auratenewyork.com/collections/new" />
+            <AurateItem title="TRENDING NOW" img={item2} url="https://auratenewyork.com/collections/bestsellers" />
         </div>
     )
 }
