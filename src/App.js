@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from "./components/header/Header";
 import Arrivals from "./components/arrival/Arrival";
+import MultipleArrivals from './components/multiple-arrivals/MultipleArrivals'
 import AurateInfo from "./components/aurate-info/AurateInfo";
 import Spinner from './components/spinner'
 import NotFound from './components/not-found'
@@ -29,15 +30,27 @@ function App() {
         )
     }
 
-    if (!data || !data.items) {
+    if (!data.length) {
         return <NotFound errorCode={500} />
+    }
+
+    if (data.length > 1) {
+        return (
+            <>
+                <Header />
+                <div className="container">
+                    <MultipleArrivals trackingData={data} />
+                    <AurateInfo />
+                </div>
+            </>
+        );
     }
 
     return (
         <>
             <Header />
             <div className="container">
-                <Arrivals trackingData={data} />
+                <Arrivals trackingData={data[0]} />
                 <AurateInfo />
             </div>
         </>

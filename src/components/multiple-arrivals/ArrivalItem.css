@@ -1,0 +1,39 @@
+.arrival-item {
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #a3aca9;
+    align-items: center;
+    transition: background-color 200ms ease-in-out;
+}
+
+.arrival-item:hover {
+    background-color: #f2f3f2;
+}
+
+.arrival-item__image {
+    width: 50px;
+    margin-right: 30px;
+}
+
+.arrival__block.y-scroll {
+    overflow-y: scroll;
+}
+
+.arrival__block-items {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.help-text {
+    margin: 20px;
+    color: #c6c6c6;
+}
+
+.arrival-items-text {
+    padding-left: 30px;
+    color: #c6c6c6;
+    text-transform: uppercase;
+    font-weight: bold;
+}

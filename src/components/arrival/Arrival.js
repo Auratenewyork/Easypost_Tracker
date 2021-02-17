@@ -5,7 +5,7 @@ import { LastTrackingActivity, FullTrackingActivity } from '../tracking-activity
 
 const LAST_ACTIVITY_NUMBER = 2
 
-const Arrivals = ({ trackingData }) => {
+const Arrivals = ({ trackingData, goBack, multiple = false }) => {
     const [showFullActivity, setShowFullActivity] = useState(false)
 
     const showPreviousActivity = () => setShowFullActivity(true)
@@ -18,6 +18,9 @@ const Arrivals = ({ trackingData }) => {
         <main className="main">
             <div className="arrival__block">
                 <span className="arrival__title">ESTIMATED SHIP DATE</span>
+                {multiple &&
+                    <div className="show-all-shipments-link" onClick={goBack}>&#x2190; <span>Show all gold shipments</span></div>
+                }
                 <div className="arrival__date">
                     <div className="arrival__day-name">{trackingData.estimated_date.weekday}</div>
                     <div className="arrival__month">{trackingData.estimated_date.month}</div>
@@ -42,7 +45,7 @@ const Arrivals = ({ trackingData }) => {
             </div>
 
             <AurateItems />
-        </main>
+        </main >
 
     )
 }

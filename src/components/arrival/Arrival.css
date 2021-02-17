@@ -16,18 +16,18 @@
     max-width: 592px;
     width: 100%;
     padding: 30px 0px;
-    background: #FFFFFF;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.03);
+    background: #ffffff;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.03);
 }
 
-.arrival__title{
+.arrival__title {
     font-size: 18px;
-    color: #42544F;
+    color: #42544f;
     letter-spacing: 0;
     display: block;
     padding-bottom: 25px;
     padding-left: 30px;
-    border-bottom: 1px solid #E4E4E4;
+    border-bottom: 1px solid #e4e4e4;
     margin-bottom: 46px;
 }
 .arrival__date {
@@ -35,28 +35,28 @@
 }
 .arrival__day-name {
     font-size: 24px;
-    color: #42544F;
+    color: #42544f;
     letter-spacing: 0;
     text-transform: uppercase;
-    font-family: 'GT Bold', sans-serif;
+    font-family: "GT Bold", sans-serif;
     font-weight: 700;
 }
 .arrival__month {
     font-size: 18px;
-    color: #42544F;
+    color: #42544f;
     letter-spacing: 0;
     text-transform: uppercase;
 }
 .arrival__day {
     font-size: 110px;
-    color: #C27030;
+    color: #c27030;
     letter-spacing: 0;
-    font-family: 'GT Italic', sans-serif;
+    font-family: "GT Italic", sans-serif;
     font-weight: 700;
 }
 .arrival__path {
     font-size: 24px;
-    color: #42544F;
+    color: #42544f;
     letter-spacing: 0;
     padding: 0 30px;
     margin-bottom: 22px;
@@ -73,11 +73,20 @@
     align-items: center;
     width: 100%;
     font-size: 14px;
-    color: #C2C2C2;
+    color: #c2c2c2;
     letter-spacing: 0;
     padding: 17px 0;
     background: none;
-    border: 2px solid #E4E4E4;
+    border: 2px solid #e4e4e4;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.show-all-shipments-link {
+    margin: 30px;
+    cursor: pointer;
+}
+
+.show-all-shipments-link span {
+    text-decoration: underline;
 }
