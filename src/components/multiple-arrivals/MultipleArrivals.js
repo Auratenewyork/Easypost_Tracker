@@ -17,8 +17,6 @@ const MultipleArrivals = ({ trackingData }) => {
         return <Arrival trackingData={selectedArrival} goBack={handleGoBack} multiple />
     }
 
-    console.log(trackingData)
-
     return (
         <main className="main">
             <div className="arrival__block y-scroll">

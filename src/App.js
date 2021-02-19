@@ -4,9 +4,10 @@ import Header from "./components/header/Header";
 import Arrivals from "./components/arrival/Arrival";
 import MultipleArrivals from './components/multiple-arrivals/MultipleArrivals'
 import AurateInfo from "./components/aurate-info/AurateInfo";
-import Spinner from './components/spinner'
-import NotFound from './components/not-found'
-import { useParams } from 'react-router-dom'
+import Spinner from './components/spinner';
+import NotFound from './components/not-found';
+import { useParams } from 'react-router-dom';
+import { API_LINK } from './constants';
 
 function App() {
     const { orderNumber } = useParams()
@@ -14,7 +15,7 @@ function App() {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetch(`https://4p9vek36rc.execute-api.us-east-2.amazonaws.com/api/tracking_information/${orderNumber}`)
+        fetch(`${API_LINK}/${orderNumber}`)
             .then(response => response.json())
             .then(data => {
                 setData(data)
