@@ -18,6 +18,7 @@
   flex-direction: column;
   margin: 0 15px;
   align-items: center;
+  width: 79px;
 }
 
 .status-message {
