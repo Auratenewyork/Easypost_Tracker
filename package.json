@@ -15,10 +15,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:dev": "REACT_APP_ENV=development react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:production": "env NODE_ENV=production react-scripts build && aws s3 sync ./build s3://aurate-tracker && aws cloudfront create-invalidation --distribution-id ECNJEL4ULB2CC --paths '/*'",
-    "deploy": "react-scripts build && aws s3 sync ./build s3://aurate-tracker-dev && aws cloudfront create-invalidation --distribution-id E2B19FQARKI7P6 --paths '/*'"
+    "deploy:production": "REACT_APP_ENV=production react-scripts build && aws s3 sync ./build s3://aurate-tracker && aws cloudfront create-invalidation --distribution-id ECNJEL4ULB2CC --paths '/*'",
+    "deploy": "REACT_APP_ENV=development yarn run build:dev && aws s3 sync ./build s3://aurate-tracker-dev && aws cloudfront create-invalidation --distribution-id E2B19FQARKI7P6 --paths '/*'"
   },
   "eslintConfig": {
     "extends": "react-app"
