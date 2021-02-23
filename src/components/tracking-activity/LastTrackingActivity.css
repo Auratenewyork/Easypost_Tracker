@@ -16,8 +16,11 @@
 .tracking-activity__item__column {
   display: flex;
   flex-direction: column;
-  margin: 0 15px;
+  margin-right: 15px;
   align-items: center;
+}
+
+.tracking-activity__item__column.datetime {
   width: 79px;
 }
 

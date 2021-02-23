@@ -10,7 +10,7 @@ const LastTrackingActivity = ({ activity }) => {
 
         return (
           <div className="tracking-activity__item" key={index}>
-            <div className="tracking-activity__item__column">
+            <div className="tracking-activity__item__column datetime">
               <div className="info__title">{item.date}</div>
               <div className="info__text">{item.time}</div>
             </div>
