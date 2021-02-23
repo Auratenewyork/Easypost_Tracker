@@ -38,6 +38,8 @@
 .arrival__block-items {
     overflow-y: scroll;
     max-height: 500px;
+    border: 1px solid #dee0de;
+    margin: 15px;
 }
 
 .help-text {
