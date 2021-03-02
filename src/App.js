@@ -27,7 +27,7 @@ function App() {
                 setIsLoading(false);
                 setError(true);
             });
-    }, []);
+    }, [orderNumber, query]);
 
     if (isLoading) {
         return (
