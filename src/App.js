@@ -1,38 +1,44 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 import Header from "./components/header/Header";
 import Arrivals from "./components/arrival/Arrival";
-import MultipleArrivals from './components/multiple-arrivals/MultipleArrivals'
+import MultipleArrivals from "./components/multiple-arrivals/MultipleArrivals";
 import AurateInfo from "./components/aurate-info/AurateInfo";
-import Spinner from './components/spinner';
-import NotFound from './components/not-found';
-import { useParams } from 'react-router-dom';
-import { API_LINK } from './constants';
+import Spinner from "./components/spinner";
+import NotFound from "./components/not-found";
+import { useParams, useLocation } from "react-router-dom";
+import { API_LINK } from "./constants";
 
 function App() {
-    const { orderNumber } = useParams()
-    const [isLoading, setIsLoading] = useState(true)
-    const [data, setData] = useState(null)
+    const query = useLocation().search;
+    const { orderNumber } = useParams();
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch(`${API_LINK}/${orderNumber}`)
-            .then(response => response.json())
-            .then(data => {
-                setData(data)
-                setIsLoading(false)
+        fetch(`${API_LINK}/${orderNumber}${query}`)
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+                setIsLoading(false);
             })
-    }, [orderNumber])
+            .catch(() => {
+                setIsLoading(false);
+                setError(true);
+            });
+    }, []);
 
     if (isLoading) {
         return (
             <div className="loading-box">
                 <Spinner />
             </div>
-        )
+        );
     }
 
-    if (!data.length) {
-        return <NotFound errorCode={500} />
+    if (error || !data) {
+        return <NotFound errorCode={500} />;
     }
 
     if (data.length > 1) {
